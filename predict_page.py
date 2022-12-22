@@ -1,8 +1,11 @@
 import streamlit as st
 import pandas as pd
-import cv2 ,tensorflow ,pickle
+import cv2 
+import tensorflow 
+import pickle
 from streamlit_drawable_canvas import st_canvas
 import numpy as np
+
 
 predictions = []
 classes = [
