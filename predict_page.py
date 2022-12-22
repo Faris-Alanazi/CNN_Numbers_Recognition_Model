@@ -1,4 +1,5 @@
 import streamlit as st
+from keras.models import load_model
 import pandas as pd
 import cv2 
 import tensorflow 
@@ -22,9 +23,9 @@ classes = [
 ]
 
 @st.cache(suppress_st_warning=True,allow_output_mutation=True)
-def load_model():
-    return  pickle.load(open('CNN.pickle', "rb"))
-cnn_model = load_model()
+def load():
+    return load_model('model.h5')
+cnn_model = load()
 
 def show_page():
     st.title('Number Recognition Model')
