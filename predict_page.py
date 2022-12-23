@@ -68,7 +68,8 @@ def predicit(canvas,col2,col3):
     
     with col2:
         st.write("")
-        st.subheader("The Predicitons is : " + str(np.argmax(pred)))
+        st.subheader("The Prediciton is : " + str(np.argmax(pred)))
+        st.write("")
         st.markdown("<h4 style='text-align: center; color: #83c9ff;'>The Predicitons Probilites in %</h4>", unsafe_allow_html=True)
         st.bar_chart(data=preds, use_container_width=True)
     
